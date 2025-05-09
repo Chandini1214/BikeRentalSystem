@@ -27,7 +27,7 @@ public class UpdateBikeServlet extends HttpServlet {
         boolean success = bikeDAO.updateBike(bike);
 
         if (success) {
-            response.sendRedirect("viewBike.jsp?message=Bike updated successfully");
+            response.sendRedirect("ViewBikeServlet?message=Bike updated successfully");
         } else {
             request.setAttribute("error", "Failed to update bike");
             request.getRequestDispatcher("updateBike.jsp").forward(request, response);
