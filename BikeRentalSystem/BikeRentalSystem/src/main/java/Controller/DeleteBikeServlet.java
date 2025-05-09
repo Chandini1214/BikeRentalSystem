@@ -19,7 +19,7 @@ public class DeleteBikeServlet extends HttpServlet {
         boolean success = bikeDAO.deleteBike(bikeId);
 
         if (success) {
-            response.sendRedirect("viewBike.jsp?message=Bike deleted successfully");
+            response.sendRedirect("ViewBikeServlet?message=Bike deleted successfully");
         } else {
             response.sendRedirect("deleteBike.jsp?error=Failed to delete bike");
         }
