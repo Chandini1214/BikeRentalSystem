@@ -26,7 +26,7 @@ public class AddBikeServlet extends HttpServlet {
         boolean success = bikeDAO.addBike(bike);
 
         if (success) {
-            response.sendRedirect("viewBike.jsp?message=Bike added successfully");
+            response.sendRedirect("ViewBikeServlet?message=Bike added successfully");
         } else {
             request.setAttribute("error", "Failed to add bike");
             request.getRequestDispatcher("addBike.jsp").forward(request, response);
